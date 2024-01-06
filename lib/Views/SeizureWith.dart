@@ -157,7 +157,7 @@ class _SeizureNewWith extends State<SeizureNewWith> {
 
   // void _startListening() {
   //   accelerometerEvents
-  //       .throttleTime(const Duration(microseconds: 50))
+  //       .throttleTime(const Duration(milliseconds: 20))
   //       .listen((AccelerometerEvent event) {
   //     setState(() {
   //       array1.add(event.x);
@@ -166,10 +166,12 @@ class _SeizureNewWith extends State<SeizureNewWith> {
   //
   //       if(array1.length == 206) {
   //         print("MAKING PREDICTION ARRAY");
+  //         _interpreter.invoke();
   //         _makePrediction();
   //         array1.clear();
   //         array1.clear();
   //         array1.clear();
+  //         _interpreter.close();
   //       }
   //       else if(array1.length > 206){
   //         print("CLEARING ARRAY");
@@ -177,40 +179,40 @@ class _SeizureNewWith extends State<SeizureNewWith> {
   //         array2.clear();
   //         array3.clear();
   //       }
-  //
-  //       // if (array1.length == 103) {
-  //       //   List<double> array1new = [];
-  //       //   List<double> array2new = [];
-  //       //   List<double> array3new = [];
-  //       //
-  //       //   array1new.addAll(array1);
-  //       //   array1new.addAll(array1);
-  //       //
-  //       //   array2new.addAll(array2);
-  //       //   array2new.addAll(array2);
-  //       //
-  //       //   array3new.addAll(array3);
-  //       //   array3new.addAll(array3);
-  //       //
-  //       //   array1 = array1new;
-  //       //   array2 = array2new;
-  //       //   array3 = array3new;
-  //       //
-  //       //   // array2.addAll(array2);
-  //       //   // array3.addAll(array3);
-  //       //   _makePrediction();
-  //       //   // Clear the arrays after making the prediction
-  //       //   array1.clear();
-  //       //   array2.clear();
-  //       //   array3.clear();
-  //       // } else if (array1.length > 103) {
-  //       //   array1 = [];
-  //       //   array2 = [];
-  //       //   array3 = [];
-  //       //   array1.clear();
-  //       //   array2.clear();
-  //       //   array3.clear();
-  //       // }
+  // //
+  // //       // if (array1.length == 103) {
+  // //       //   List<double> array1new = [];
+  // //       //   List<double> array2new = [];
+  // //       //   List<double> array3new = [];
+  // //       //
+  // //       //   array1new.addAll(array1);
+  // //       //   array1new.addAll(array1);
+  // //       //
+  // //       //   array2new.addAll(array2);
+  // //       //   array2new.addAll(array2);
+  // //       //
+  // //       //   array3new.addAll(array3);
+  // //       //   array3new.addAll(array3);
+  // //       //
+  // //       //   array1 = array1new;
+  // //       //   array2 = array2new;
+  // //       //   array3 = array3new;
+  // //       //
+  // //       //   // array2.addAll(array2);
+  // //       //   // array3.addAll(array3);
+  // //       //   _makePrediction();
+  // //       //   // Clear the arrays after making the prediction
+  // //       //   array1.clear();
+  // //       //   array2.clear();
+  // //       //   array3.clear();
+  // //       // } else if (array1.length > 103) {
+  // //       //   array1 = [];
+  // //       //   array2 = [];
+  // //       //   array3 = [];
+  // //       //   array1.clear();
+  // //       //   array2.clear();
+  // //       //   array3.clear();
+  // //       // }
   //     });
   //   });
   // }

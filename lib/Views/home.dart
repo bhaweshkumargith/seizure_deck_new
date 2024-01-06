@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:seizure_deck/Views/Community.dart';
 import 'package:seizure_deck/Views/exercise.dart';
-import 'package:seizure_deck/Views/seizure.dart';
-import 'package:seizure_deck/Views/seizure_new.dart';
+import 'package:seizure_deck/Views/medicationHomepage.dart';
+// import 'package:seizure_deck/Views/seizure.dart';
+// import 'package:seizure_deck/Views/seizure_new.dart';
 
 import 'SeizureWith.dart';
 
@@ -65,7 +67,9 @@ class Home extends StatelessWidget {
         width: buttonWidth,
         height: buttonHeight,
         child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => medicationHomePage()));
+            },
             // style: ElevatedButton.styleFrom(
             //     padding: EdgeInsets.all(35.0)
             // ),
@@ -105,7 +109,9 @@ class Home extends StatelessWidget {
         width: buttonWidth,
         height: buttonHeight,
         child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => DiscussionScreen()));
+            },
             // style: ElevatedButton.styleFrom(
             //     padding: EdgeInsets.all(35.0)
             // ),
